@@ -1,0 +1,9 @@
+body{
+  background-color: aqua;
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+  font-family: 'Courier New', Courier, monospace;
+}
