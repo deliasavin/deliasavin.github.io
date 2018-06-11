@@ -1,11 +1,174 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title> Portfolio </title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7//css//bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    body{
+      position: relative;
+    }
+    #aboutme {padding-top: 100px; padding-bottom: 10px; background-color: white}
+    .navbar{
+      margin-bottom: 50px;
+      border-radius: 0;
+      background-color: #3498DB;
+      color: white;
+      padding: 1% 0;
+      font-size: 1.2em;
+      border: 0;
+    }
+    .navbar-brand{
+      color: #D5D5D5;
+      float: left;
+      font-size: 2.5em;
+      padding: 15px 15px 15px;
+    }
+    .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover{
+      color: white;
+      background-color: #3498DB;
+    }
+    .navbar-inverse .navbar-nav li a{
+      color: #D5D5D5;
+    }
+    .carousel-caption{
+      top: 50%;
+      transform: translateY(-50%);
+      text-transform: uppercase;
+    }
+    .btn{
+      font-size: 18px;
+      color: white;
+      padding: 12px 22px;
+      background-color: #3498DB;
+      border: 2px solid white;
+    }
+
+    footer{
+      margin-top: 5px;
+      width: 100%;
+      background-color: #3498DB;
+      padding: 3%;
+      color: white;
+    }
+    .fa{
+      padding: 15px;
+      font-size: 25px;
+      color: white;
+    }
+    .fa:hover{
+      color: #D5D5D5;
+      text-decoration: none;
+    }
+
+    @media(max-width: 900px){
+      .fa{
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+    @media  (max-width: 600px){
+      .carousel-caption{
+        display: none;
+      }
+    }
+    </style>
   </head>
 
-  <body>
-    <h1> Test </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempore hic cupiditate enim aliquid ab architecto nesciunt dolores eveniet. Placeat doloremque praesentium accusantium tenetur! Dicta adipisci aspernatur fugit iusto esse!</p>
+  <body data-spy="scroll" data-target=".navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color: #D5D5D5">Delia Savin</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#aboutme">About me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="aboutme" class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Who am I?</h2>
+          <br>
+          <p>Computer Science student at the University of Manchester, studying towards MEng Artificial Intelligence.</p>
+          <p>Finished my second year, heading towards my third year, with an expected overall of a 2:1 so far.</p>
+          <p>I have been working as a Computer Science Student Ambassador since October 2017. Through this I have managed to be involved in some of the underlying organisation behind my university. This has helped me improve my team working abilities as well as my organisational skills.</p>
+          <p>Prior to being a Student Ambassador I have volunteered for a charitable organisation back in Romania as well as for the Hachink Society here at the University.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="img/me.png" class="img-responsive">
+        </div>
+      </div>
+    </div>
+
+    <br> <br>
+
+    <div id="projects" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#projects" data-slide-to="0" class="active"></li>
+        <li data-target="#projects" data-slide-to="1"></li>
+        <li data-target="#projects" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="img/sunset.jpg" height="650">
+          <div class="carousel-caption">
+            <h1>get to know me</h1>
+            <br>
+            <button type="button" class="btn btn-default">Get started</button>
+          </div>
+        </div> <!--End Active-->
+        <div class="item">
+          <img src="img/sky.jpg" height="650">
+        </div>
+        <div class="item">
+            <img src="img/mountains.jpg" height="650">
+          </div>
+      </div>
+      <!--Start slider controls-->
+      <a class="left carousel-control" href="#projects" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#projects" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> <!--End Slider-->
+
+    <footer id="contact" class="container-fluid text-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Contact me</h3>
+          <br>
+          <h4>+447510930127</h4>
+          <br>
+          <h4>delia_savin@yahoo.com</h4>
+        </div>
+
+        <div class="col-sm-4">
+            <h3>Connect</h3>
+            <br>
+            <a href="https://www.linkedin.com/in/deliasavin/" class="fa fa-linkedin"></a>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
