@@ -5,170 +5,112 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7//css//bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-    body{
-      position: relative;
-    }
-    #aboutme {padding-top: 100px; padding-bottom: 10px; background-color: white}
-    .navbar{
-      margin-bottom: 50px;
-      border-radius: 0;
-      background-color: #3498DB;
-      color: white;
-      padding: 1% 0;
-      font-size: 1.2em;
-      border: 0;
-    }
-    .navbar-brand{
-      color: #D5D5D5;
-      float: left;
-      font-size: 2.5em;
-      padding: 15px 15px 15px;
-    }
-    .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover{
-      color: white;
-      background-color: #3498DB;
-    }
-    .navbar-inverse .navbar-nav li a{
-      color: #D5D5D5;
-    }
-    .carousel-caption{
-      top: 50%;
-      transform: translateY(-50%);
-      text-transform: uppercase;
-    }
-    .btn{
-      font-size: 18px;
-      color: white;
-      padding: 12px 22px;
-      background-color: #3498DB;
-      border: 2px solid white;
-    }
-
-    footer{
-      margin-top: 5px;
-      width: 100%;
-      background-color: #3498DB;
-      padding: 3%;
-      color: white;
-    }
-    .fa{
-      padding: 15px;
-      font-size: 25px;
-      color: white;
-    }
-    .fa:hover{
-      color: #D5D5D5;
-      text-decoration: none;
-    }
-
-    @media(max-width: 900px){
-      .fa{
-        font-size: 20px;
-        padding: 10px;
-      }
-    }
-    @media  (max-width: 600px){
-      .carousel-caption{
-        display: none;
-      }
-    }
-    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body data-spy="scroll" data-target=".navbar">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#" style="color: #D5D5D5">Delia Savin</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#aboutme">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light navbar-custom fixed-top" style="background-color:#3498DB">
+      <a class="navbar-brand" href="#" style="color:#D5D5D5"> Delia Savin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="myNavbar">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutme" style="color:#D5D5D5">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" style="color:#D5D5D5">My projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" style="color:#D5D5D5">Contact</a>
+            </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+      
 
-    <div id="aboutme" class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Who am I?</h2>
-          <br>
-          <p>Computer Science student at the University of Manchester, studying towards MEng Artificial Intelligence.</p>
-          <p>Finished my second year, heading towards my third year, with an expected overall of a 2:1 so far.</p>
-          <p>I have been working as a Computer Science Student Ambassador since October 2017. Through this I have managed to be involved in some of the underlying organisation behind my university. This has helped me improve my team working abilities as well as my organisational skills.</p>
-          <p>Prior to being a Student Ambassador I have volunteered for a charitable organisation back in Romania as well as for the Hachink Society here at the University.</p>
-        </div>
-        <div class="col-md-6">
-          <img src="img/me.png" class="img-responsive">
+    <div data-spy="scroll" data-target="#myNavbar">
+      <br> <br> <br>
+      <div id="aboutme" class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Who am I?</h2>
+            <br>
+            <p>Computer Science student at the University of Manchester, studying towards MEng Artificial Intelligence.</p>
+            <p>Just started my third year, with an expected overall of a 2:1 so far.</p>
+            <p>I have been working as a Computer Science Student Ambassador since October 2017. Through this I have managed to be involved in some of the underlying organisation behind my university. This has helped me improve my team working abilities as well as my organisational skills.</p>
+            <p>Prior to being a Student Ambassador I have volunteered for a charitable organisation back in Romania as well as for the Hacking Society here at the University.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/me.png" class="img-responsive">
+          </div>
         </div>
       </div>
+
+      <div id="projects" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#projects" data-slide-to="0" class="active"></li>
+          <li data-target="#projects" data-slide-to="1"></li>
+          <li data-target="#projects" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/sunset.jpg" alt="First slide" width="650">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Edinburgh</h5>
+              <p>A pretty photo of the sunset in Edinburgh</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/sky.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Sky</h5>
+              <p>The sky of somewhere</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/mountains.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mountains</h5>
+              <p>Don't we all love nature?</p>
+            </div>
+          </div>
+        </div>
+        <!--Start Slider Controls-->
+        <a class="carousel-control-prev" href="#projects" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#projects" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div> <!--End Slider Controls-->
+
+      <footer id="contact" class="container-fluid text-center">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Contact me</h3>
+            <br>
+            <h4>+447510930127</h4>
+            <br>
+            <h4>delia_savin@yahoo.com</h4>
+          </div>
+
+          <div class="col-sm-4">
+              <h3>Connect</h3>
+              <br>
+              <a href="https://www.linkedin.com/in/deliasavin/" class="fa fa-linkedin"></a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <br> <br>
-
-    <div id="projects" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#projects" data-slide-to="0" class="active"></li>
-        <li data-target="#projects" data-slide-to="1"></li>
-        <li data-target="#projects" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="img/sunset.jpg" height="650">
-          <div class="carousel-caption">
-            <h1>get to know me</h1>
-            <br>
-            <button type="button" class="btn btn-default">Get started</button>
-          </div>
-        </div> <!--End Active-->
-        <div class="item">
-          <img src="img/sky.jpg" height="650">
-        </div>
-        <div class="item">
-            <img src="img/mountains.jpg" height="650">
-          </div>
-      </div>
-      <!--Start slider controls-->
-      <a class="left carousel-control" href="#projects" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#projects" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div> <!--End Slider-->
-
-    <footer id="contact" class="container-fluid text-center">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Contact me</h3>
-          <br>
-          <h4>+447510930127</h4>
-          <br>
-          <h4>delia_savin@yahoo.com</h4>
-        </div>
-
-        <div class="col-sm-4">
-            <h3>Connect</h3>
-            <br>
-            <a href="https://www.linkedin.com/in/deliasavin/" class="fa fa-linkedin"></a>
-        </div>
-      </div>
-    </footer>
-
   </body>
 </html>
